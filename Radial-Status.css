@@ -1,0 +1,187 @@
+:root {
+  --rs-version: "2.0.9";
+  --rs-avatar-shape: 50%; /* Assuming it's a circular shape */
+  --rs-online-color: #43b581;
+  --rs-idle-color: #faa61a;
+  --rs-dnd-color: #f04747;
+  --rs-streaming-color: #593695;
+  --rs-offline-color: #747f8d;
+  --rs-invisible-color: #82858f;
+  --rs-self-speaking-colour: #57d39b;
+  --rs-phone-visible: block;
+  --rs-phone-color: var(--rs-online-color);
+  --rs-medium-width: 2px;
+  --rs-medium-spacing: 4px;
+  --rs-large-width: 3px;
+  --rs-large-spacing: 6px;
+}
+
+#app-mount .wrapper_c51b4e {
+  border-radius: var(--rs-avatar-shape);
+  display: block;
+}
+
+#app-mount .wrapper_c51b4e img, 
+#app-mount .wrapper_c51b4e.avatar_d808b0 {
+  border-radius: var(--rs-avatar-shape);
+  -webkit-clip-path: none;
+  clip-path: none;
+}
+
+#app-mount .wrapper_c51b4e svg {
+  overflow: visible;
+  contain: none;
+}
+
+#app-mount .wrapper_c51b4e foreignObject {
+  -webkit-mask: none;
+  mask: none;
+}
+
+#app-mount .wrapper_c51b4e .dots_ce0450 circle {
+  cy: -8 !important;
+}
+
+#app-mount .wrapper_c51b4e .dots_ce0450 circle:nth-child(1) {
+  cx: -8.5 !important;
+}
+
+#app-mount .wrapper_c51b4e .dots_ce0450 circle:nth-child(2) {
+  cx: -2.25 !important;
+}
+
+#app-mount .wrapper_c51b4e .dots_ce0450 circle:nth-child(3) {
+  cx: 4 !important;
+}
+
+#app-mount .wrapper_c51b4e .mask_c51b4e > rect,
+#app-mount .wrapper_c51b4e .mask_c51b4e > circle {
+  width: 100%;
+  height: 100%;
+  opacity: 0 !important;
+  cx: 43%;
+  cy: 20;
+  -webkit-mask: none;
+  mask: none;
+}
+
+#app-mount .wrapper_c51b4e .pointerEvents_c51b4e[x="14.5"] {
+  fill: rgba(0, 0, 0, 0.5) !important;
+  width: 30px;
+  height: 30px;
+  x: 1;
+  y: 1;
+}
+
+#app-mount .wrapper_c51b4e rect {
+  x: 0;
+  y: 0;
+  width: 100%;
+  height: 100%;
+  fill: transparent !important;
+  stroke-width: var(--rs-small-width);
+  rx: var(--rs-avatar-shape);
+  ry: var(--rs-avatar-shape);
+  -webkit-mask: none;
+  mask: none;
+}
+
+#app-mount .wrapper_c51b4e rect[fill="#43b581"], 
+#app-mount .wrapper_c51b4e rect[fill="#3ba55c"],
+#app-mount .wrapper_c51b4e rect[fill="rgba(67, 181, 129, 1)"],
+#app-mount .wrapper_c51b4e rect[mask*=online] {
+  stroke: var(--rs-online-color);
+}
+
+#app-mount .wrapper_c51b4e rect[fill="#faa61a"], 
+#app-mount .wrapper_c51b4e rect[fill="rgba(250, 166, 26, 1)"],
+#app-mount .wrapper_c51b4e rect[mask*=idle] {
+  stroke: var(--rs-idle-color);
+}
+
+#app-mount .wrapper_c51b4e rect[fill="#f04747"],
+#app-mount .wrapper_c51b4e rect[fill="rgba(240, 71, 71, 1)"],
+#app-mount .wrapper_c51b4e rect[mask*=dnd] {
+  stroke: var(--rs-dnd-color);
+}
+
+#app-mount .wrapper_c51b4e rect[fill="#593695"],
+#app-mount .wrapper_c51b4e rect[mask*=streaming] {
+  stroke: var(--rs-streaming-color);
+}
+
+#app-mount .wrapper_c51b4e rect[fill="#747f8d"], 
+#app-mount .wrapper_c51b4e rect[mask*=offline], 
+#app-mount .wrapper_c51b4e rect[fill="#80848e"],
+#app-mount .wrapper_c51b4e rect[fill=NaN] {
+  stroke: var(--rs-offline-color);
+}
+
+#app-mount .wrapper_c51b4e rect[fill="#747f8d"], 
+#app-mount .wrapper_c51b4e rect[mask*=invisible],
+#app-mount .wrapper_c51b4e rect[fill="rgba(116, 127, 141, 1)"] {
+  stroke: var(--rs-invisible-color);
+}
+
+#app-mount .wrapper_c51b4e rect[x="16"] {
+  width: 24px;
+  height: 24px;
+}
+
+#app-mount .wrapper_c51b4e rect[x="28"] {
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+}
+
+#app-mount .wrapper_c51b4e[style*="32px"] rect,
+#app-mount .wrapper_c51b4e[style*="40px"] rect {
+  position: relative;
+  z-index: 0;
+}
+
+#app-mount .wrapper_c51b4e[style*="80px"] rect {
+  width: 80px;
+  height: 80px;
+  stroke-width: var(--rs-medium-width);
+}
+
+#app-mount .wrapper_c51b4e[style*="120px"] rect {
+  width: 120px;
+  height: 120px;
+  stroke-width: var(--rs-large-width);
+}
+
+#app-mount .avatarSpeaking_c51b4e {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: var(--rs-avatar-shape);
+  box-shadow: inset 0 0 0 2px var(--rs-self-speaking-colour), inset 0 0 0 3px var(--background-secondary);
+}
+
+#app-mount .avatarHintInner_f89da9 {
+  border-radius: var(--rs-avatar-shape) !important;
+  padding-top: 0;
+  width: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
+  height: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+#app-mount .avatarWrapperNonUserBot_f89da9 .wrapper_c51b4e img {
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+}
+
+#app-mount .userInfo_f3939d .wrapper_c51b4e {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+#app-mount .info_c5a741 .line_c5a741:last-child:after {
+  content: "RadialStatus " var(--rs-version);
+  display: block;
+}
